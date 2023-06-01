@@ -29,12 +29,12 @@ const resolvers = {
 
             const token = signToken(user)
 
-            return{token, user}
+            return{ token, user }
         },
         addUser: async(parent, args) =>{
             const user = await User.create(args)
             const token = signToken(user);
-            return{token, user}
+            return{ token, user }
         },
         // {authors, description, title,bookID, image, link}
         saveBook: async(parent,args, context) =>{
@@ -62,3 +62,5 @@ const resolvers = {
         }
     }
 }
+
+module.exports = resolvers
