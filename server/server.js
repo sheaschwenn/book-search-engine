@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 const startApolloServer = async() => {
   await server.start();
-  server.applyMiddleWare({app})
+  server.applyMiddleware({app})
 
 
   db.once('open', () => {
